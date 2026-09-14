@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إلى خولة 🎂</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Amiri:wght@400;700&display=swap');
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; overflow-x:hidden;
+  font-family:Cairo,sans-serif; color:#3e3040;
+  background:linear-gradient(145deg,#fff7f0,#f8eef8 48%,#edf5ff);
+}
+.stars{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.75;animation:twinkle 3s infinite ease-in-out}
+@keyframes twinkle{50%{opacity:.2;transform:scale(.55)}}
+.card{
+  width:min(92%,700px); margin:7vh auto; padding:38px 28px;
+  background:rgba(255,255,255,.72); backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.9); border-radius:30px;
+  box-shadow:0 20px 70px rgba(105,75,105,.16); text-align:center;
+}
+h1{font-family:Amiri,serif;font-size:52px;margin:5px 0;color:#6c4f68}
+h2{font-family:Amiri,serif;font-size:34px;color:#76556e}
+p{line-height:2;font-size:17px}
+.badge{display:inline-block;padding:7px 16px;border-radius:30px;background:#fff;border:1px solid #eadce8;font-size:14px}
+button{
+  border:0;border-radius:999px;padding:14px 26px;margin:18px 6px;
+  font:600 16px Cairo;cursor:pointer;color:#fff;
+  background:linear-gradient(135deg,#9b7294,#6e8db5);
+  box-shadow:0 9px 22px rgba(110,80,120,.2);transition:.25s
+}
+button:hover{transform:translateY(-2px)}
+.hidden{display:none}
+.message{
+  margin-top:25px;padding:25px;border-radius:22px;background:rgba(255,250,255,.8);
+  animation:fade .8s ease
+}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.mini{padding:17px 10px;border-radius:20px;background:#fff8fb;border:1px solid #f0e1ec}
+.mini b{display:block;margin-bottom:7px;color:#72566f}
+#final{font-family:Amiri,serif;font-size:25px;line-height:1.9}
+.emoji{font-size:55px}
+.small{font-size:13px;color:#81717e}
+@media(max-width:560px){h1{font-size:44px}.cards{grid-template-columns:1fr}.card{padding:30px 20px;margin:4vh auto}}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<main class="card">
+  <div class="emoji">🎂✨</div>
+  <span class="badge">A little birthday surprise</span>
+  <h1>خولة</h1>
+  <p>20 سنة من الحكايات...<br>واليوم تبدأ سنة جديدة منها 🌷</p>
+  <button onclick="openGift()">افتحي هديتك 🎁</button>
+  <div style="margin-top:8px">
+    <audio id="music" src="birthday_music.mp3" preload="metadata"></audio>
+    <button id="musicBtn" onclick="toggleMusic()" style="font-size:14px;padding:10px 20px">🎵 تشغيل الموسيقى</button>
+    <div class="small">أغنية صغيرة اخترتها لترافق هذه الهدية 🤍</div>
+  </div>
+
+  <section id="gift" class="hidden">
+    <div class="message">
+      <h2>عيد ميلاد سعيد يا خولة 🤍</h2>
+      <p>
+        حبيت هذه المرة ما يكون كلامي مجرد «كل عام وأنتِ بخير» وخلاص،
+        فقلت أصنع لك شيئًا صغيرًا يكون بمثابة تذكار بسيط مني لكِ.
+        يمكن الكلمات وحدها ما تكفيش حتى أعبّر عن قيمة وجودك في حياتي،
+        لكن على الأقل حبيت أحاول وأقول لكِ شيئًا من الأشياء التي ربما لا أقولها دائمًا.
+      </p>
+      <p>
+        وأريدك تعرفي أن وجودك بالنسبة لي ليس شيئًا عابرًا أو مجرد معرفة
+        على الإنترنت. أقدّر فيكِ لطفك، وطريقتك في التعامل معي، ودعمك لي،
+        خصوصًا في المواقف الصعبة التي كنت أحتاج فيها شخصًا يسمعني أو يقف بجانبي.
+        ربما بعض تلك المواقف بدت لكِ بسيطة، لكن بالنسبة لي كان لوقوفك معي معنى كبير،
+        وأنا فعلًا لا أنسى الأشخاص الذين يجعلون الأيام الصعبة أخفّ قليلًا.
+
+        أقدّر كل مرة كنتِ فيها داعمة، وكل كلمة طيبة قلتِها لي،
+        وكل مرة حاولتِ فيها أن ترفعي معنوياتي أو تجعليني أشعر أن الأمور ستكون بخير.
+        وأتمنى أنك تعرفي أن هذا كله له قيمة كبيرة عندي، حتى لو لم أكن دائمًا
+        جيدًا في التعبير عن ذلك.
+
+        وفي سنتك العشرين، أتمنى من قلبي أن تكون أيامك القادمة أجمل بكثير مما تتوقعين؛
+        أن تجدي في طريقك أشخاصًا يقدّرون قلبك كما تستحقين،
+        وأن تحققي الأشياء التي تتمنينها واحدة تلو الأخرى،
+        وأن لا تجدي في حياتك إلا السعادة والراحة والطمأنينة.
+        وإذا جاءت أيام صعبة، أتمنى أن تجدي دائمًا من يقف معك كما وقفتِ أنتِ معي.
+
+        وأيضًا... أتمنى أن تنجح كل وصفة تطبخينها من أول محاولة،
+        لأنني بصراحة لا أستطيع أن أضمن لكِ شيئًا آخر 😂🍳
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="mini"><b>🍳 للمطبخ</b>أتمنى كل وصفة تجربينها تطلع أحلى مما توقعتِ.</div>
+      <div class="mini"><b>📺 لذكريات سبيستون</b>لأيام الطفولة التي ما زال لها مكان صغير في القلب.</div>
+      <div class="mini"><b>🎶 للموسيقى</b>ولكل أغنية قديمة تعرف كيف تقول شيئًا لا نستطيع قوله.</div>
+    </div>
+
+    <button onclick="surprise()">اضغطي هنا... في شيء أخير 👀</button>
+    <div id="last" class="message hidden">
+      <div id="final">إذا وصلتي إلى هنا، فأريدك أن تعرفي شيئًا أخيرًا:
+      مهما كانت هذه الصفحة بسيطة، فالسبب الحقيقي وراءها هو أنني أردت أن أقول لكِ
+      إنكِ شخص له قيمة كبيرة عندي، وإن لطفك ودعمك ووقوفك معي لم يمرّ عليّ مرور الكرام.
+      هناك أشخاص نتعرف عليهم بالصدفة، ثم يصبح وجودهم مع الوقت شيئًا نعتز به،
+      وأنتِ من الأشخاص الذين أقدّر وجودهم فعلًا.
+
+      شكرًا على كل مرة كنتِ فيها موجودة، على كلامك الطيب،
+      على دعمك، وعلى كل موقف جعلتِ فيه يومًا صعبًا أسهل.
+      قد لا أقول «شكرًا» في كل مرة، لكن هذا لا يعني أنني لا أقدّر الأمر.
+
+      أتمنى أن تكون سنتك العشرون بداية لأجمل الفصول في حياتك،
+      وأن يكون نصيبك من هذه الدنيا راحة بعد التعب، وفرح بعد الحزن،
+      وأشخاصًا صادقين يحبون لكِ الخير، وأيامًا تجعلك تقولين:
+      «الحمد لله أنني وصلت إلى هنا».
+
+      لا أتمنى لكِ حياة بلا صعوبات، فهذا مستحيل،
+      لكن أتمنى أن تكون لديكِ دائمًا القوة لتتجاوزيها،
+      وأن يأتي بعدها دائمًا شيء أجمل.
+
+      عيد ميلاد سعيد يا خولة 🤍🌷<br>
+      وعقبال 100 سنة مليئة بالسعادة والذكريات الجميلة.
+      <br><br>— عبد الرحمان 🎈</div>
+      <p class="small">صنعت هذه الصفحة خصيصًا لكِ 🤍</p>
+    </div>
+  </section>
+</main>
+<script>
+function openGift(){
+ document.getElementById('gift').classList.remove('hidden');
+ const music=document.getElementById('music');
+ music.play().then(()=>document.getElementById('musicBtn').textContent='⏸ إيقاف الموسيقى').catch(()=>{});
+ window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+ confetti();
+}
+function toggleMusic(){
+ const music=document.getElementById('music'), btn=document.getElementById('musicBtn');
+ if(music.paused){ music.play().then(()=>btn.textContent='⏸ إيقاف الموسيقى'); }
+ else { music.pause(); btn.textContent='🎵 تشغيل الموسيقى'; }
+}
+function surprise(){
+ document.getElementById('last').classList.remove('hidden');
+ confetti();
+ window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+}
+function confetti(){
+ for(let i=0;i<45;i++){
+  const e=document.createElement('div');
+  e.textContent=['✨','🌸','🤍','🎈','⭐'][Math.floor(Math.random()*5)];
+  e.style.position='fixed';e.style.left=Math.random()*100+'vw';e.style.top='-30px';
+  e.style.fontSize=(14+Math.random()*18)+'px';e.style.zIndex=10;
+  e.style.transition='transform '+(1.8+Math.random()*1.5)+'s linear, opacity 2.5s';
+  document.body.appendChild(e);
+  requestAnimationFrame(()=>{e.style.transform='translateY('+(window.innerHeight+80)+'px) rotate('+(Math.random()*600-300)+'deg)';e.style.opacity='0'});
+  setTimeout(()=>e.remove(),4000);
+ }
+}
+for(let i=0;i<55;i++){
+ const s=document.createElement('span');s.className='star';
+ s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+ s.style.animationDelay=Math.random()*3+'s';document.getElementById('stars').appendChild(s);
+}
+</script>
+</body>
+</html>
